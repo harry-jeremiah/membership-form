@@ -6,9 +6,10 @@
     <title>CHURCH MEMBERSHIP FORM</title>
     <style>
         .container {
-            width: 60vw;
-            margin: 40px auto;
-            padding: 40px;
+            max-width:900px;
+            width: 100%;
+            margin: 20px auto;
+            padding: 20px;
             border-color: 10px;
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
             font-family: 'Arial Narrow', Arial, sans-serif;
@@ -28,7 +29,8 @@
 
         input, textarea {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
+            font-size:16px;    /* prevents mobile zoom */
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -55,13 +57,14 @@
             justify-content: space-between;
             align-items: center;
             margin: 10px 0;
-            gap: 20px;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         ul li .right {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             margin: 0;
         }
 
@@ -82,6 +85,39 @@
             border-radius: 6px;
             font-size: 16px;
             cursor: pointer;
+        }
+
+        @media (max-width: 768px){
+            h2 {
+                font-size: 18px;
+                text-align:center;
+            }
+
+            h3, h4 {
+                font-size:16px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            ul li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            ul li .right input{
+                width: 100%;
+            }
+
+            .btn-wrapper {
+                text-align: stretch;
+            }
+            
+            button {
+                width: 100%;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
